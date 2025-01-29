@@ -1,0 +1,94 @@
+import './App.css';
+import Er from './components/er';
+import Suc from './components/suc';
+
+function App() {
+ 
+function validate(){
+  if (document.getElementById.innervalue ==="Monish@123")
+  {
+    <Suc />
+    
+  }
+  else{
+
+    <Er />
+
+  }
+  
+}
+  return (
+    <div>
+      <input type="password" id="get"></input>
+      <button onClick={validate}>Go</button>
+    </div>
+  ); 
+}
+
+export default App;
+---------------------------------------------------------------------
+import React, { useState } from 'react';
+
+const Home = () => {
+
+    const [intial,changing]=useState({"name":"","age":"0"})
+
+    function update(event){
+        console.log(event.target.value)
+    }
+  return (
+    <div>
+      <form>
+        <div>
+          <label htmlFor="name">Name</label>
+          <input type="text" name={intial.name} placeholder="Enter your name"  onChange={update}/>
+        </div>
+        <div>
+          <label htmlFor="age">Age</label>
+          <input type="text" name={intial.age} placeholder="Enter your age" onChange={update}/>
+        </div>
+      </form>
+    </div>
+  );
+};
+
+export default Home;
+--------------------------------------------------------------------------------
+iimport React, { useState } from 'react';
+
+const Home = () => {
+    const [initial, changing] = useState({ name: "", age: "0" });
+
+    function update(event) {
+        const { name, value } = event.target;
+        
+        changing((prevState) => ({
+            ...prevState,
+            [name]: value
+        }));
+
+        console.log(initial);
+    }
+
+    return (
+        <div>
+            <form>
+                <div>
+                    <label htmlFor="name">Name</label>
+                    <input type="text" name="name" placeholder="Enter your name" onChange={update} />
+                </div>
+                <div>
+                    <label htmlFor="age">Age</label>
+                    <input type="text" name="age" placeholder="Enter your age" onChange={update} />
+                </div>
+            </form>
+        </div>
+    );
+};
+
+export default Home;
+--------------------------------------------------------------------
+explanatiom:
+userinfo is the key for the reducers and use reducers is the name we 
+give for reducer action we get from userslice.js
+zte is reducer userinfo from  store  
