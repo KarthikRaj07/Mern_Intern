@@ -1,0 +1,32 @@
+Title arrow function from es6
+    it is efficiently in tersms of space  and increase the readability 
+    we can cretae  a function without name nad it is called as arrow function
+<body>
+    <h1 id="response"></h1>
+    <h1 id="res"></h1>       
+
+    <script>
+        const howareyou = () => {
+            return 100;
+        }
+
+        var add = (a, b) => { return a + b; }
+
+        document.getElementById("response").innerHTML = howareyou();
+        document.getElementById("res").innerHTML = add(100, 200);
+    </script>
+</body>
+-----------------------------------------------------------
+array:
+create an array
+array size and its element extract all the perfect numbers
+array slice:
+    <script>
+        var Eis=[1,2,3,4,6,8]
+        alert(Eis)
+        var c=Eis.slice(1,4)
+        alert(c)
+        a=parseInt(prompt("Ente any number"))
+    </script>
+    -------------------------------------------------------------
+    
