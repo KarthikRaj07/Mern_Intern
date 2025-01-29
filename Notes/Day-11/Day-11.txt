@@ -1,0 +1,21 @@
+MongoDb:
+    clenr and server:
+    mongosh,mongodb-client and  mongoshell, mongo-db,no-swl,
+    examplejson format 
+
+    compass:
+    it helps to fetch data from mongodb server 
+
+    at is the interface help us to reach the mongodb serve which menas 
+    uses compass use cna fetch dat from server
+
+    mongosh:
+    the mpngodb shell queries you can interactive environment 'the mongoshell replace with mongosh 
+    
+    data modelling:
+    how many data is look like
+
+
+    schema diagram:
+    it is atual bleprint  od db used create the dara modelling
+
