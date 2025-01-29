@@ -1,0 +1,221 @@
+use effect code:
+        import React, { useEffect, useState } from 'react';
+
+const Clock = () => {
+  const [c, setC] = useState(0);
+
+  const btn = {
+    color: 'white',
+    backgroundColor: 'orange',
+    borderRadius: '50px' 
+  };
+
+  useEffect(() => {
+    console.log('The start value has changed:', c);
+  }, [c]);
+
+  return (
+    <>
+      <div>
+        <h1>Counter Clock</h1>
+        <button style={btn} onClick={() => setC(c + 1)}>+</button>
+        <button style={btn} onClick={() => setC(c - 1)}>-</button>
+        <button style={btn} onClick={() => setC(0)}>Reset</button>
+        <p>Count: {c}</p>
+      </div>
+    </>
+  );
+};
+
+export default Clock;
+
+
+----------------------------------------------------------------
+import React, { useEffect, useState } from 'react';
+
+const Clock = () => {
+  const [c, setC] = useState(0);
+
+  const btn = {
+    color: 'white',
+    backgroundColor: 'orange',
+    borderRadius: '50px' 
+  };
+
+  useEffect(() => {
+    document.getElementById("o").innerHTML=(`Counter value: ${c}`);
+  }, [c]); 
+
+  return (
+    <>
+      <div>
+        <h1>Counter Clock</h1>
+        <button style={btn} onClick={() => setC(c + 1)}>+</button>
+        <button style={btn} onClick={() => setC(c - 1)}>-</button>
+        <button style={btn} onClick={() => setC(0)}>Reset</button>
+        <h1 id='o'></h1>
+
+      </div>
+    </>
+  );
+};
+
+export default Clock;
+------------------------------------------------------------------
+use reducer:
+    same as usestate to manage or update states thet is data that is value of componets differnece 
+    is if u hv more states or complex things u use usereducer hook
+    
+    i) cretae imcrement  decrement program  with use reducer 
+    ii)replace usestate with use reducer
+note:
+i) use reducer takes 2 arguments first is reducer function which sasys 
+what u wnat to do second is intial vlaue of state 
+
+ii)usereducer returns array iwth two valuse like usestate 
+ first is that intial count and second count and second is dispatch function we call them as state and dipatch
+
+
+-------------------------------------------------------------------
+
+import React, { useReducer } from 'react';
+
+const btn = {
+    color: 'white',
+    backgroundColor: 'orange',
+    borderRadius: '50px'
+};
+
+function reducer(state, action) {
+    return{c:state.c+1}
+}
+
+const Reduce = () => {
+    const [state, dispatch] = useReducer(reducer, { c: 50 });
+
+    function incr() {
+        dispatch();
+    }
+
+    function decr() {
+        dispatch();
+    }
+
+    return (
+        <div>
+            <h1>Counter Clock</h1>
+            <p>{state.c}</p>
+            <button style={btn} onClick={incr}>+</button>
+            <button style={btn} onClick={decr}>-</button>
+        </div>
+    );
+}
+
+export default Reduce;
+-------------------------------------------------------------------
+improvised:
+    import React, { useReducer } from 'react';
+
+const btn = {
+    color: 'white',
+    backgroundColor: 'orange',
+    borderRadius: '50px'
+};
+
+function reducer(state, action) {
+    switch (action.type) {
+        case 'increment':
+            return { c: state.c + 1 };
+        case 'decrement':
+            return { c: state.c - 1 };
+
+        case 're':
+            return {c:50};
+        default:
+            return state;
+    }
+}
+
+const Reduce = () => {
+    const [state, dispatch] = useReducer(reducer, { c: 50 });
+
+    function incr() {
+        dispatch({ type: 'increment' });
+    }
+
+    function decr() {
+        dispatch({ type: 'decrement' });
+    }
+    function reset(){
+        dispatch({type:'re'})
+    }
+
+    return (
+        <div>
+            <h1>Counter Clock</h1>
+            <p>{state.c}</p>
+            <button style={btn} onClick={incr}>+</button>
+            <button style={btn} onClick={decr}>-</button>
+            <button style={btn} onClick={reset}>Reset</button>
+        </div>
+    );
+}
+
+export default Reduce;
+--------------------------------------------------------
+import React, { useReducer } from 'react';
+
+const btn = {
+    color: 'white',
+    backgroundColor: 'orange',
+    borderRadius: '50px'
+};
+
+const actions =
+{
+    INCR:"increment",
+    DECR:"decrement",
+    RST:"re"
+}
+
+function reducer(state, action) {
+    switch (action.type) {
+        case actions.INCR:
+            return { c: state.c + 1 };
+        case actions.DECR:
+            return { c: state.c - 1 };
+
+        case actions.RST:
+            return {c:50};
+        default:
+            return state;
+    }
+}
+
+const Reduce = () => {
+    const [state, dispatch] = useReducer(reducer, { c: 50 });
+
+    function incr() {
+        dispatch({ type: 'increment' });
+    }
+
+    function decr() {
+        dispatch({ type: 'decrement' });
+    }
+    function reset(){
+        dispatch({type:'re'})
+    }
+
+    return (
+        <div>
+            <h1>Counter Clock</h1>
+            <p>{state.c}</p>
+            <button style={btn} onClick={incr}>+</button>
+            <button style={btn} onClick={decr}>-</button>
+            <button style={btn} onClick={reset}>Reset</button>
+        </div>
+    );
+}
+
+export default Reduce;
+----------------------------------------------------------------
