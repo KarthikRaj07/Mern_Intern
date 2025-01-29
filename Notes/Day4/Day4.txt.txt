@@ -1,0 +1,23 @@
+evry components having props and states 
+props:
+at wont chnage 
+eg: tata,bisleri
+state:
+it changes or we can changes
+eg: water bottle level @Intail state full  and update  state half current state emptyy
+flipkar website:
+    home page {groceries mobile fashion}
+    mobiles:
+        components name mobiles 
+        props:name version price 
+        state:discount
+        stock
+hooks:
+    early they use a class components reason beyond state concept was not avalibale with functional components 
+    now hooks is used to implement sate in functional component 
+    use state
+    use effect
+    use context 
+    use router
+eg:counter clock
+    stating the intial state as 0 we can increment it and reset it using use state hook

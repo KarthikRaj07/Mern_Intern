@@ -1,0 +1,75 @@
+states
+
+import React, { useState } from 'react';
+
+const Array = () => {
+    const [arr1] = useState([5, 6, 7, 18]);
+    const [arr2] = useState([80, 60, 70, 24]);
+    const [arr3, setArr3] = useState([]);
+
+    function concate() {
+        setArr3(arr1.concat(arr2));
+    }
+    
+    return (
+        <div>
+            <h1>{arr1.toString()}</h1>
+            <h2>{arr2.toString()}</h2>
+            <h3 id='res'>{arr3.toString()}</h3>
+            <button onClick={concate}>Concatenate</button>
+        </div>
+    );
+}
+-------------------------------------
+export default Array;
+ 
+const Array = () => {
+    function concate(arr1, arr2) {
+        
+        var arr3=arr1.concat(arr2); 
+        document.getElementById("res").innerHTML=arr3
+    }
+
+    const arr1 = [5, 6, 7, 18];
+    const arr2 = [80, 60, 70, 24];
+    const concatenatedArray = concate(arr1, arr2);
+
+    return (
+        <div>
+            <h1>{arr1}</h1>
+            <h2>{arr2}</h2>
+            <h3 id='res' ></h3>
+            <button onClick={concatenatedArray} >Concte</button>
+            
+        </div>
+    );
+}
+
+export default Array;
+----------------------------------
+spread opearor:
+    import React, { useState } from 'react';
+
+const ArrayComponent = () => {
+    const ar1 = [4, 5, 6, 8, 9];
+    const ar2 = [5, 7, 64, 3, 9];
+    
+    const [fi, setFi] = useState([]);
+
+    const co = () => {
+        setFi([...ar1, ...ar2]);
+    };
+    
+    return (
+        <div>
+            <h1>Spread Operator</h1>
+            <h1>{ar1.toString()}</h1>
+            <h1>{ar2.toString()}</h1>
+            <h1>{fi.toString()}</h1>
+            <button onClick={co}>Change</button>
+        </div>
+    );
+}
+
+export default ArrayComponent;
+
