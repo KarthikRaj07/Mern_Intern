@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Paradise</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="one">
+        <a href="#home"><img src="download.png" alt="Logo" class="logo"></a>
+        <h1 id="title">Little <span style="color: green;">Arabia</span></h1>
+        <img src="images.jpg" alt="Decorative Banner" class="banner">
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-images">
+                <img src="cravings-capture-cafe-gurgaon-restaurants-aeboyfa0i4.avif" alt="Image 1" class="carousel-image">
+                <img src="360_F_843484361_CIxugXLnL93AatJo9vs8iy26H6F5oCNS.jpg" alt="Image 2" class="carousel-image">
+                <img src="wooden-restaurant-table-full-delicious-burgres-french-fries_636537-178185.avif" alt="Image 3" class="carousel-image">
+                <img src="images (1).jpg" alt="Image 4" class="carousel-image">
+                <img src="photo-1633636492874-e2c8a3f1f203.jpg" alt="Image 5" class="carousel-image">
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="hero">
+        <div class="hero-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid deleniti vero quasi accusantium id delectus dolorem non labore beatae sint.</p>
+            <button id="know">Know More</button>
+        </div>
+        <div class="hero-image">
+            <img src="istockphoto-1081422898-612x612.jpg" alt="Hero" class="rounded-image">
+        </div>
+    </section>
+
+    <section id="menu" class="menu">
+        <div class="menu-item">
+            <img src="mandi.jpg" alt="Menu 1">
+            <h3>Mandi Biriyani🥗🥗</h3>
+            <button class="ord" >Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="rill.jpg" alt="Menu 2">
+            <h3>Grill Chicken🍗🍗</h3>
+            <button class="ord">Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="bbq.jpg" alt="Menu 3">
+            <h3>BBQ🐔🐔</h3>
+            <button class="ord">Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="burg.jpg" alt="Menu 4">
+            <h3>Burgers🍔🍔</h3>
+            <button class="ord">Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="sh.jpg" alt="Menu 5">
+            <h3>Shawarma🥐🥐</h3>
+            <button class="ord">Order</button>
+        </div>
+        <div class="menu-item">
+            <img src="moji.jpg" alt="Menu 6">
+            <h3>Mojito's🍸🍸</h3>
+            <button class="ord">Order</button>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-us">
+        <div>
+            <h1>Address</h1>
+            <p>Street:  9/416, Auto Towers, Jc Road, J C Road<br>
+                City:   Bangalore
+                <br>
+                State/province/area:    Karnataka
+                <br>
+                Phone number: 86468461464
+                <br>
+                Zip code:  560002
+                <br>
+                Country calling code:  +911434344
+                <br>
+                Country:  India
+                </p>
+        </div>
+        <div>
+            <iframe  src="https://www.google.com/maps/place/Little+Arabia/@10.359491,77.9736456,17z/data=!3m1!4b1!4m6!3m5!1s0x3b00ab3d6a6ffb5b:0x17870a3ee4d60203!8m2!3d10.359491!4d77.9762205!16s%2Fg%2F11qz7x55mr?entry=ttu&g_ep=EgoyMDI1MDEwMS4wIKXMDSoASAFQAw%3D%3D"></iframe>
+            <button id="Fran">Get Franchise</button>
+        </div>
+        <div>
+            <h1>Feedback</h1>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        
+    </section>
+
+    <footer class="end">
+        <div>
+            <p>Copyright@2025 Little Arabia</p>
+        </div>
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel-image');
+        const totalImages = images.length;
+
+        function changeSlide() {
+            currentIndex = (currentIndex + 1) % totalImages;
+            const offset = -currentIndex * 100;
+            document.querySelector('.carousel-images').style.transform = `translateX(${offset}%)`;
+        }
+
+        setInterval(changeSlide, 3000); // Change slide every 3 seconds
+    </script>
+</body>
+
+</html>
