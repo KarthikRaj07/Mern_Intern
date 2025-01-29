@@ -1,0 +1,18 @@
+RUN By : node file-name
+it is famous js library 
+maintain split termian; in order to use ck=lient and serve
+npm start
+
+npm init-y
+
+-------------------------------------------------------------
+axios:it is popular js library use to make ttp request from the browser or node js
+            axious known for easi=y and clean syntax abd aslo flexibility
+            espescially well with api and rest api's
+            for an exclusive purpose 
+cors:
+    cross orgin resource sharing
+    when  web page require information from sources 
+    i)npm i axios 
+in a given example we are getting fom server.... in a datacomponents.js as aclient using http get method via apiserver response as json file i want to filter only the msg so ew
+are using fom cors response.data.smg
