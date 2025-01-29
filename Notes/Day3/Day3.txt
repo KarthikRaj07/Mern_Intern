@@ -1,0 +1,115 @@
+promise:
+     let  reachA = new Promise(function(resolve,reject)) => {
+        let reached=true
+        if (reached){
+            setTimeout(resolve,5000,"Areached")
+
+        }
+        else{
+            reject("Not Reached")
+        }
+
+    }
+    let  reachB = new Promise(function(resolve,reject)) => {
+        let reached=true
+        if (reached){
+            setTimeout(resolve,2000,"Areached")
+
+        }
+        else{
+            reject("Not Reached")
+        }
+
+    }
+    let  reachC = new Promise(function(resolve,reject)) => {
+        let reached=true
+        if (reached){
+            setTimeout(resolve,1000,"Areached")
+
+        }
+        else{
+            reject("Not Reached")
+        }
+
+promise inbuilt methods:
+settled
+any
+all
+if there are more promise in order to revue them we can use promise inbuilt method according to our requirmnets 
+
+--
+promise.all=>
+once it see true for all  then it returns true else false
+
+--promise.any{
+    gives the shotest time promise provides status should be true
+}
+
+--
+promise.settled all{
+    status and reason can be display for the each function
+    status :fullfiled,rejected and reason  :value,error for reason
+}
+
+--
+promise.race{
+    what comes fast time returns the value only for  the value true
+
+}
+
+---------------------
+closure:
+function one(){
+    var x=10
+    two()
+    function two(){
+        console.log(x)
+    }
+   
+   }
+   one()
+    }
+      function one(){
+    var x=777;
+    function two(){
+        console.log(x)
+    }
+   return two
+   }
+   var res=one()
+   res()
+----------------------------
+react js:
+    libaries or framework of js
+    netflix,amazon
+    html website: wikipidea
+commands:
+    npm -v
+    npx -v
+    npx create-react-app name
+    cd. to the locations
+    npm start
+
+main folder :
+    src,public
+3 major files:
+    index.html
+    index.js
+    index.css
+note:dont touch index files
+note:start with app.js
+
+react follows vdom;
+    here unlike html once dom get created the changes or manipulation what we do gets completed while that part can be get rerendrer 
+    whereas in a html  everytime we maxe a change 
+
+in web application created by react  and eveything is called as components  
+types of componensts:
+ functional components
+ class component
+ --------
+ jsx
+
+
+xml
+jsx
