@@ -1,0 +1,263 @@
+
+.myname{
+  margin-bottom: 0px;
+  font-family: Boring Sans A Trial Heavy;
+  
+
+}
+.role{
+  margin-top: 0px;
+  font-family: 'Courier New', Courier, monospace;
+  
+}
+
+#tsparticles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Ensure it stays behind other elements */
+}
+
+body {
+  
+  background-color: #2973B2;
+  /* margin: 0; */
+  /* overflow: hidden;  Optional: Prevent scrolling */
+}
+
+
+.container {
+  display: flex;
+  align-items: center; /* Vertically aligns items */
+  justify-content: center; /* Centers the content horizontally */
+  gap: 20px; /* Space between the text and the image */
+}
+
+.name {
+  text-align: left;
+}
+
+.img1 {
+  width: 150px; /* Set width */
+  height: 150px; /* Set height (same as width for a perfect circle) */
+  border-radius: 50%; /* Turns the image into a circle */
+  object-fit: cover; /* Ensures the image covers the circle without stretching */
+   /* Optional border for the image */
+}
+
+.img1{
+  
+  
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+ 
+}
+
+
+
+
+
+
+
+.footer {
+  background-color: #9ACBD0;  
+  margin-bottom: 0px;
+}
+.footer-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap; 
+}
+.footer-section h3 {
+  margin-bottom: 10px;
+  font-size: 18px; 
+}
+.footer-section p,
+.footer-section ul {
+  font-size: 14px;
+  line-height: 1.5; 
+}
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-section ul li {
+  margin-bottom: 5px; 
+}
+.footer-section ul li a { 
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.footer-bottom {
+  text-align: center;
+  margin-top: 10px;
+  font-size: 12px;
+}
+
+
+
+
+
+
+.education table {
+  width: 100%;
+  margin-top: 20px;
+  text-align: left; 
+}
+.education th, .education td {
+  padding: 8px 16px;
+}
+.education th {
+  font-size: 18px; 
+}
+.education td {
+  font-size: 16px;
+}
+.education table, .education th, .education td {
+     border: none; /* Removes the border */
+}
+
+
+
+
+nav {
+  background-color: #333;
+ 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin: 0 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+nav a:hover {
+  background-color: #575757;
+  color: #fff;
+  border-radius: 4px;
+}
+nav a.active {
+  background-color: #007BFF;
+  color: white;
+  border-radius: 4px;
+}
+body {
+  padding-top: 60px;
+}
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  nav a {
+    margin: 10px 0;
+  }
+}
+
+
+
+
+
+.aboutdiv{
+  background-color: #9ACBD0;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px 0;
+  font-style: Roboto Light;
+  
+  
+  margin-right: 200px;
+}
+.skilldiv{
+  background-color: #9ACBD0;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px 0;
+  font-style: Roboto Light;
+  margin-left: 200px;
+}
+.projectdiv{
+  background-color: #9ACBD0;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px 0;
+  font-style: Roboto Light;
+  margin-right: 200px;
+}
+.certDiv{
+  background-color: #9ACBD0;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px 0;
+  font-style: Roboto Light;
+  margin-left: 200px;
+}
+.eduDiv{
+  background-color: #9ACBD0;
+  border: 2px solid #000;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px 0;
+  font-style: Roboto Light;
+}
+
+
+
+
+
+.eduDiv:hover{
+  background-color: #48A6A7;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  color: #F2EFE7;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.certDiv:hover{
+  background-color: #48A6A7;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  color: #F2EFE7;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.projectdiv:hover{
+  background-color: #48A6A7;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  color: #F2EFE7;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.skilldiv:hover{
+  background-color: #48A6A7;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  color: #F2EFE7;
+  cursor: pointer;
+  border-radius: 10px;
+}
+.aboutdiv:hover{
+  background-color: #48A6A7;
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+  color: #F2EFE7;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+
+.heading{
+  font-family: Zwizz SemiBold;
+}
+
+
