@@ -1,0 +1,218 @@
+/* General Styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #121212;
+  color: white;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeInBackground 3s ease-in-out forwards;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+  animation: popIn 1s ease-out;
+}
+
+input[type="text"], button {
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 2px solid #888;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-color: #f39c12;
+}
+
+button {
+  cursor: pointer;
+  width: 150px;
+}
+
+button:active {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+/* Animations */
+@keyframes fadeInBackground {
+  0% { background-color: #000000; }
+  100% { background-color: #121212; }
+}
+
+@keyframes popIn {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Login Styles */
+h2 {
+  font-size: 2rem;
+  color: #f39c12;
+  animation: popIn 1.5s ease-out;
+}
+
+/* Quiz Styles */
+h2, h3, p {
+  color: #fff;
+}
+
+button {
+  width: 100%;
+  margin: 5px 0;
+  background-color: #16a085;
+  border: 2px solid #1abc9c;
+}
+
+button:hover {
+  background-color: #1abc9c;
+  border-color: #16a085;
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+.quiz-container {
+  width: 80%;
+  max-width: 600px;
+  margin: auto;
+}
+
+button {
+  border-radius: 5px;
+  background-color: #2ecc71;
+  color: white;
+  font-size: 1.1rem;
+  padding: 12px 20px;
+}
+
+button:hover {
+  background-color: #27ae60;
+}
+
+button:active {
+  background-color: #2ecc71;
+}
+
+/* Leaderboard Styles */
+h2 {
+  font-size: 2.5rem;
+  color: #f39c12;
+}
+
+h3 {
+  font-size: 1.5rem;
+  color: #ecf0f1;
+}
+
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  animation: fadeIn 1s ease-in-out;
+}
+
+li:nth-child(even) {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.user-score {
+  padding: 20px;
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  animation: bounceIn 1s ease-in-out;
+}
+
+.user-score p {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* User's Score Styles */
+.user-score p {
+  color: #ecf0f1;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Animation for leaderboard and user score */
+@keyframes bounceIn {
+  0% { transform: scale(0); opacity: 0; }
+  50% { transform: scale(1.05); opacity: 1; }
+  100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Navbar and App wrapper */
+.App {
+  background-color: #121212;
+  padding: 20px;
+}
+
+.App a {
+  text-decoration: none;
+  color: #f39c12;
+  font-size: 1.2rem;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .container {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .quiz-container {
+    width: 90%;
+  }
+}
+
+
+/* Styling for the score title */
+.score-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Styling for the score details */
+.score-details {
+  font-size: 18px;
+  color: #555;
+}
+
+.score-details strong {
+  color: #000;
+}
